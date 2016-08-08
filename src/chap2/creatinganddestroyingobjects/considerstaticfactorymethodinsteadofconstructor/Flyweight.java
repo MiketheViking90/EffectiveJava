@@ -21,8 +21,30 @@ public class Flyweight {
         throw new IllegalArgumentException("Illegal value for Flyweight.");
     }
 
+    public static Flyweight getFlyweightA() {
+        return flyweightA;
+    }
+
+    public static Flyweight getFlyweightB() {
+        return flyweightB;
+    }
+
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName() + " " + this.value;
+    }
+
     private Flyweight(String value) {
         this.value = value;
     }
 
+
+    public static void main(String[] args) {
+        Flyweight flyweightA = Flyweight.valueOf("A");
+        Flyweight flyweightA1 = Flyweight.getFlyweightA();
+        Flyweight flyweightB = Flyweight.getFlyweightB();
+
+        System.out.println(flyweightA);
+        System.out.println(flyweightB);
+    }
 }
