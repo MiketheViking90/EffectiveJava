@@ -1,8 +1,8 @@
-package chap2.creatinganddestroyingobjects;
+package chap2.creatinganddestroyingobjects.considerstaticfactorymethodinsteadofconstructor;
 
 import java.math.BigInteger;
 
-public class StaticFactoryMethodOverConstructors {
+public class UseStaticFactoryMethod {
 
     void booleanValueOf() {
         boolean b = Boolean.valueOf(false);
@@ -28,4 +28,6 @@ public class StaticFactoryMethodOverConstructors {
             val2 = a;
         }
     }
+
+
 }
