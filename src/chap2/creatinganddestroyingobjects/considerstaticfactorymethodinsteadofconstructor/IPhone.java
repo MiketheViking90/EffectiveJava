@@ -13,6 +13,14 @@ class IPhone implements Phoneable {
         System.out.println(this + " making a phone call.");
     }
 
+    public Phoneable returnPhoneable() {
+        return new IPhone();
+    }
+
+    public ModifiedIPhone returnSubIPhone() {
+        return new ModifiedIPhone();
+    }
+
     IPhone() {
         id = counter++;
     }
