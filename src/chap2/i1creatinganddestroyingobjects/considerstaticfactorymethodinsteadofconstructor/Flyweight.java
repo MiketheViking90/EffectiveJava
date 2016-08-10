@@ -1,4 +1,4 @@
-package chap2.creatinganddestroyingobjects.considerstaticfactorymethodinsteadofconstructor;
+package chap2.i1creatinganddestroyingobjects.considerstaticfactorymethodinsteadofconstructor;
 
 import java.util.Map;
 
