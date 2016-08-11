@@ -1,4 +1,4 @@
-package chap2.i1creatinganddestroyingobjects.considerstaticfactorymethodinsteadofconstructor;
+package chap2.item1;
 
 public enum ShirtSize {
 

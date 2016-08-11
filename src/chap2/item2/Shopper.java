@@ -1,6 +1,6 @@
-package chap2.i2considerbuilderwhenfacedwithmanyconstructorparams;
+package chap2.item2;
 
-import chap2.i2considerbuilderwhenfacedwithmanyconstructorparams.NutritionFacts.NutritionFactsBuilder;
+import chap2.item2.NutritionFacts.NutritionFactsBuilder;
 
 public class Shopper {
 

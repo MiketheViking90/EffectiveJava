@@ -1,4 +1,4 @@
-package chap2.i2considerbuilderwhenfacedwithmanyconstructorparams;
+package chap2.item2;
 
 import lombok.ToString;
 

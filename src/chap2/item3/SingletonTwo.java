@@ -1,4 +1,4 @@
-package chap2.i3encoforcesingletonwithprivateconstructor;
+package chap2.item3;
 
 public class SingletonTwo {
 
