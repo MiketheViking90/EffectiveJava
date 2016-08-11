@@ -10,6 +10,7 @@ public class Shopper {
         builder.calories(200);
 
         NutritionFacts facts = builder.build();
+        NutritionFacts facts2 = builder.build();
         System.out.println(facts);
     }
 

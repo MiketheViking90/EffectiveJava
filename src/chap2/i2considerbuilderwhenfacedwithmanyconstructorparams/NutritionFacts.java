@@ -5,6 +5,9 @@ import lombok.ToString;
 @ToString
 public class NutritionFacts {
 
+    private static int count = 0;
+
+    private final int id;
     private final int servingSize;
     private final int servings;
     private final int calories;
@@ -28,10 +31,22 @@ public class NutritionFacts {
         this.fat = fat;
         this.carbs = carbs;
         this.protein = protein;
+
+        this.id = count++;
     }
 
-    // Builder pattern
-    public static class NutritionFactsBuilder {
+    private NutritionFacts(NutritionFactsBuilder builder) {
+        this.servingSize = builder.servingSize;
+        this.servings = builder.servings;
+        this.calories = builder.calories;
+        this.fat = builder.fat;
+        this.carbs = builder.carbs;
+        this.protein = builder.protein;
+
+        this.id = count++;
+    }
+
+    public static class NutritionFactsBuilder implements GenericBuilder<NutritionFacts> {
         private final int servingSize;
         private final int servings;
 
@@ -43,6 +58,13 @@ public class NutritionFacts {
         public NutritionFactsBuilder(int servingSize, int servings) {
             this.servingSize = servingSize;
             this.servings = servings;
+        }
+
+        public NutritionFactsBuilder macros(int fat, int carbs, int protein) {
+            this.fat = fat;
+            this.carbs = carbs;
+            this.protein = protein;
+            return this;
         }
 
         public NutritionFactsBuilder calories(int calories) {
@@ -65,8 +87,9 @@ public class NutritionFacts {
             return this;
         }
 
+        @Override
         public NutritionFacts build() {
-            return new NutritionFacts(servingSize, servings, calories, fat, carbs, protein);
+            return new NutritionFacts(this);
         }
 
     }
