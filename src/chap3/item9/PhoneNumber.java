@@ -59,6 +59,11 @@ public class PhoneNumber implements Comparable<PhoneNumber> {
         return 0;
     }
 
+    @Override
+    public String toString() {
+        return String.format("(%d)%d-%d", areaCode, prefix, lineNumber);
+    }
+
     private void checkAreaCodeRange(int areaCode) {
         if (areaCode < MIN_NUMBER || areaCode > MAX_THREE_DIGIT_NUMBER) {
             throw new IllegalArgumentException();
