@@ -3,7 +3,7 @@ package chap3.item9;
 import lombok.Getter;
 
 @Getter
-public class PhoneNumber {
+public class PhoneNumber implements Comparable<PhoneNumber> {
 
     // Provide access to all info contained in toString()
     private final int areaCode;
@@ -43,6 +43,20 @@ public class PhoneNumber {
     public int hashCode() {
         int val = (areaCode * 13) + (prefix * 13) + (lineNumber * 13);
         return val % 31;
+    }
+
+    @Override
+    public int compareTo(PhoneNumber pn) {
+        int areaCodeDiff = pn.areaCode - areaCode;
+        if (areaCodeDiff != 0) return areaCodeDiff;
+
+        int prefixDiff = pn.prefix - prefix;
+        if (prefixDiff != 0) return prefixDiff;
+
+        int lineNumberDiff = pn.lineNumber - lineNumber;
+        if (lineNumberDiff != 0) return lineNumberDiff;
+
+        return 0;
     }
 
     private void checkAreaCodeRange(int areaCode) {
