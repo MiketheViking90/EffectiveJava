@@ -19,7 +19,12 @@ public final class Complex {
     private final double real;
     private final double imaginary;
 
-    public Complex(double real, double imaginary) {
+    public Complex valueOf(double real, double imaginary) {
+        return new Complex(real, imaginary);
+    }
+
+    // alternative to final class is make constructor private and only expose static factory methods
+    private Complex(double real, double imaginary) {
         this.real = real;
         this.imaginary = imaginary;
     }
