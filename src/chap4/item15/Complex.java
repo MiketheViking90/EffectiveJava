@@ -23,8 +23,8 @@ public final class Complex {
         return new Complex(real, imaginary);
     }
 
-    // alternative to final class is make constructor private and only expose static factory methods
-    private Complex(double real, double imaginary) {
+    // alternative to final class is make constructor (pkg) private and only expose static factory methods
+    Complex(double real, double imaginary) {
         this.real = real;
         this.imaginary = imaginary;
     }
