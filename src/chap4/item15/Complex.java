@@ -33,7 +33,6 @@ public final class Complex {
     public double realComponent() {
         return real;
     }
-
     public double imaginaryComponent() {
         return imaginary;
     }
