@@ -3,6 +3,8 @@ package chap4.item19;
 /**
  * ANTI-PATTERN
  * Implementing this interface says nothing about what the client can do with the implementation
+ *
+ * Export constants in the class or interface that uses the constants so they are viewed as a member
  */
 public interface PhysicalConstants {
 
