@@ -5,7 +5,7 @@ package chap4.item19;
  */
 public class PhysicalConstants {
 
-    private PhysicalConstants() { throw new UnsupportedOperationException() }
+    private PhysicalConstants() { throw new UnsupportedOperationException(); }
 
     public static final double AVOGADROS_NUMBER = 6.022e23;
 
