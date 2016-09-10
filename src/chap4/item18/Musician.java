@@ -4,7 +4,7 @@ public class Musician implements Singer, Songwriter {
 
     @Override
     public void sing(Song song) {
-        System.out.println(song.getName(););
+        System.out.println(song.getName());
     }
 
     @Override
