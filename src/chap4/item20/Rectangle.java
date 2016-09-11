@@ -10,7 +10,7 @@ public final class Rectangle extends Figure {
     private final double area;
 
     public Rectangle(double length, double width) {
-        this.length = length;
+        this.   length = length;
         this.width = width;
 
         area = length*width;
