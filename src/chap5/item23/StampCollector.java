@@ -1,7 +1,5 @@
 package chap5.item23;
 
-import chap2.item6.Collective;
-
 import java.util.ArrayList;
 import java.util.Collection;
 
