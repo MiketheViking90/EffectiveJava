@@ -1,7 +1,6 @@
 package chap5.item25;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
 
