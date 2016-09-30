@@ -29,4 +29,10 @@ public enum Planet {
         return mass*surfaceGravity;
     }
 
+    public static void main(String[] args) {
+        double earthWeight = 135.0/Planet.EARTH.getSurfaceGravity();
+        for (Planet p : Planet.values()) {
+            System.out.println("Weight on " + p + " is " + p.getSurfaceWeight(earthWeight));
+        }
+    }
 }
