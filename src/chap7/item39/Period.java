@@ -1,11 +1,9 @@
 package chap7.item39;
 
-import lombok.Getter;
 import lombok.ToString;
 
 import java.util.Date;
 
-@Getter
 @ToString
 public class Period {
 
@@ -18,6 +16,14 @@ public class Period {
         }
         this.begin = new Date(begin.getTime());
         this.end = new Date(end.getTime());
+    }
+
+    public Date getBegin() {
+        return new Date(begin.getTime());
+    }
+
+    public Date getEnd() {
+        return new Date(end.getTime());
     }
 
     public static void main(String[] args) {
